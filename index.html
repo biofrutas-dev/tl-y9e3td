@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Titans Logopedia · Propuestas web</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#fafafa}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.dots{background-image:radial-gradient(#d4d4d4 1.4px,transparent 1.6px);background-size:16px 16px}
+</style>
+</head>
+<body class="text-neutral-900">
+<header class="dots border-b-2 border-black">
+  <div class="max-w-6xl mx-auto px-4 py-14 text-center">
+    <img src="./logo-horizontal.png" alt="Titans Logopedia" class="h-28 mx-auto object-contain bg-white rounded-xl p-2 border-2 border-black" onerror="this.outerHTML='<div class=&quot;text-4xl font-bold&quot;>Titans Logopedia</div>'">
+    <p class="mt-6 uppercase tracking-[.3em] text-xs font-semibold text-neutral-500">Bocetos comerciales · Noviembre 2026</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold">5 propuestas web · versión 2</h1>
+    <p class="mt-4 max-w-2xl mx-auto text-neutral-600">Cinco estilos nuevos, todos con reserva de cita, para presentar a Adrián Quiles y su consulta de Vilamarxant. Mismo contenido de base, distinta estrategia: elija la que mejor represente su forma de trabajar y la ajustamos con fotos y datos reales.</p>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="grid"></main>
+
+<footer class="border-t py-8 text-center text-sm text-neutral-500">
+  Desarrollado por <a href="https://github.com/biofrutas-dev" target="_blank" rel="noopener" class="underline">Biofrutas</a> · <a href="mailto:biofrutas.dev@gmail.com" class="underline">biofrutas.dev@gmail.com</a> · <a href="https://github.com/biofrutas-dev" target="_blank" rel="noopener" class="underline">github.com/biofrutas-dev</a>
+</footer>
+
+<script>
+const P=[
+ ["propuesta-1-ludica-infantil.html","1 · Lúdica infantil","Familias con peques","#FFFDF7","#8B7CF6","Pastel lila, amarillo y menta, formas redondeadas y tono alegre. Pensada para que padres y niños se sientan en casa desde el primer clic.","smile"],
+ ["propuesta-2-mediterranea.html","2 · Mediterránea serena","Calma y cercanía","#F6F1E9","#1D5C7A","Arena, azul mar y terracota con tipografía clásica. Transmite la luz y la tranquilidad de una consulta de pueblo valenciano.","sun"],
+ ["propuesta-3-bento-moderna.html","3 · Bento moderna","Moderna y directa","#F2F2EF","#FF6B4A","Rejilla de tarjetas tipo app, coral y negro. Toda la información clave (teléfono, WhatsApp, horario) visible de un vistazo.","layout-grid"],
+ ["propuesta-4-sanitaria-premium.html","4 · Sanitaria premium","Confianza clínica","#E9F5F4","#0E7C7B","Verde azulado sanitario y estructura de centro médico, con selector visual de día y hora para reservar la cita.","calendar-days"],
+ ["propuesta-5-suiza-tipografica.html","5 · Suiza tipográfica","Carácter y diseño","#FFFFFF","#000000","Rejilla suiza en blanco y negro con acento amarillo y tipografía gigante. Fiel a la fuerza gráfica del logo, sin perder seriedad.","type"]
+];
+grid.innerHTML=P.map(p=>`
+<article class="bg-white border-2 border-black rounded-2xl overflow-hidden flex flex-col shadow-[6px_6px_0_#000]">
+  <div class="h-28 flex items-center justify-center" style="background:${p[3]}">
+    <span class="w-14 h-14 rounded-full grid place-items-center text-white" style="background:${p[4]}"><i data-lucide="${p[6]}"></i></span>
+  </div>
+  <div class="p-6 flex-1 flex flex-col">
+    <p class="text-xs uppercase tracking-widest font-semibold" style="color:${p[4]==='#FFFFFF'?'#000':p[4]}">${p[2]}</p>
+    <h2 class="text-2xl font-bold mt-1">${p[1]}</h2>
+    <p class="text-neutral-600 mt-3 flex-1">${p[5]}</p>
+    <a href="${p[0]}" target="_blank" rel="noopener" class="mt-6 inline-flex items-center justify-center gap-2 bg-black text-white font-semibold rounded-xl py-3 hover:bg-neutral-800">Abrir propuesta <i data-lucide="external-link" class="w-4 h-4"></i></a>
+  </div>
+</article>`).join('');
+lucide.createIcons();
+</script>
+</body>
+</html>
