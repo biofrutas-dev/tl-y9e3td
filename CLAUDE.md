@@ -5,3 +5,6 @@
 - No inventar reseñas, horarios ni colegiado: marcadores `[... a confirmar]`.
 - Pie con crédito Biofrutas enlazado en todas.
 - PDF: Edge headless `--print-to-pdf` por página + pdf-lib (Node) para unir. No hay Python.
+
+## Modelo elegido (2026-11-20)
+El cliente eligió `propuesta-3-bento-moderna.html`. Todos los cambios futuros se hacen sobre ese archivo, sin tocar los otros modelos salvo que se pida.
